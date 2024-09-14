@@ -1,0 +1,141 @@
+/* Apply dark background and light text color for the body */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Style the buttons */
+button {
+    background-color: #1e88e5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #1565c0;
+    transform: translateY(-5px);
+}
+
+/* Button shake animation when active */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#deleteChecksBtn:active {
+    animation: shake 0.5s;
+}
+
+/* Style the preformatted text for displaying output */
+pre {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+/* Headings */
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+/* Previous checks container */
+#previousChecks {
+    background-color: #292929;
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 20px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Loading spinner */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1e88e5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for previous checks */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlight effect */
+@keyframes highlight {
+    from {
+        background-color: #42a5f5;
+    }
+    to {
+        background-color: #292929;
+    }
+}
+
+.new-entry {
+    animation: highlight 1s ease-out;
+}
